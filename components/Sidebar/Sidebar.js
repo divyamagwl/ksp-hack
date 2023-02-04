@@ -26,7 +26,7 @@ export default function Sidebar() {
               href="#pablo"
               className="md:block text-left md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0"
             >
-              Notus NextJS
+              Bank Account Analysis
             </a>
           </Link>
           {/* User */}
@@ -54,7 +54,7 @@ export default function Sidebar() {
                       href="#pablo"
                       className="md:block text-left md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0"
                     >
-                      Notus NextJS
+                      Bank Account Analysis
                     </a>
                   </Link>
                 </div>
@@ -84,12 +84,84 @@ export default function Sidebar() {
             <hr className="my-4 md:min-w-full" />
             {/* Heading */}
             <h6 className="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline">
-              Admin Layout Pages
+              Bank Accounts
             </h6>
             {/* Navigation */}
 
             <ul className="md:flex-col md:min-w-full flex flex-col list-none">
               <li className="items-center">
+                <Link href="/admin/tables">
+                  <a
+                    href="#pablo" 
+                    className={
+                      "text-xs uppercase py-3 font-bold block " +
+                      (router.pathname.indexOf("/admin/tables") !== -1
+                        ? "text-lightBlue-500 hover:text-lightBlue-600"
+                        : "text-blueGray-700 hover:text-blueGray-500")
+                    }
+                  >
+                    <i
+                      className={
+                        "fas fa-user-circle text-blueGray-400 mr-2 text-sm " +
+                        (router.pathname.indexOf("/admin/tables") !== -1
+                          ? "opacity-75"
+                          : "text-blueGray-300")
+                      }
+                    ></i>{" "}
+                    All Accounts
+                  </a>
+                </Link>
+              </li>
+
+              <li className="items-center">
+                <Link href="/admin/dashboard">
+                  <a
+                    href="#pablo" 
+                    className={
+                      "text-xs uppercase py-3 font-bold block " +
+                      (router.pathname.indexOf("/admin/dasbhoard") !== -1
+                        ? "text-lightBlue-500 hover:text-lightBlue-600"
+                        : "text-blueGray-700 hover:text-blueGray-500")
+                    }
+                  >
+                    <i
+                      className={
+                        "fas fa-search text-blueGray-400 mr-2 text-sm " +
+                        (router.pathname.indexOf("/admin/dasbhoard") !== -1
+                          ? "opacity-75"
+                          : "text-blueGray-300")
+                      }
+                    ></i>{" "}
+                    Search Accounts
+                  </a>
+                </Link>
+              </li>
+
+              <li className="items-center">
+                <Link href="/admin/dashboard">
+                  <a
+                    href="#pablo" 
+                    className={
+                      "text-xs uppercase py-3 font-bold block " +
+                      (router.pathname.indexOf("/admin/dasbhoard") !== -1
+                        ? "text-lightBlue-500 hover:text-lightBlue-600"
+                        : "text-blueGray-700 hover:text-blueGray-500")
+                    }
+                  >
+                    <i
+                      className={
+                        "fas fa-search text-blueGray-400 mr-2 text-sm " +
+                        (router.pathname.indexOf("/admin/dasbhoard") !== -1
+                          ? "opacity-75"
+                          : "text-blueGray-300")
+                      }
+                    ></i>{" "}
+                    IFSC Locator
+                  </a>
+                </Link>
+              </li>
+
+              {/* <li className="items-center">
                 <Link href="/admin/dashboard">
                   <a
                     href="#pablo"
@@ -183,19 +255,31 @@ export default function Sidebar() {
                     Maps
                   </a>
                 </Link>
-              </li>
+              </li> */}
             </ul>
 
             {/* Divider */}
             <hr className="my-4 md:min-w-full" />
             {/* Heading */}
             <h6 className="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline">
-              Auth Layout Pages
+              Fraud Detector
             </h6>
             {/* Navigation */}
 
             <ul className="md:flex-col md:min-w-full flex flex-col list-none md:mb-4">
               <li className="items-center">
+                <Link href="/auth/fraud">
+                  <a
+                    href="#pablo"
+                    className="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
+                  >
+                    <i className="fas fa-fingerprint text-blueGray-400 mr-2 text-sm"></i>{" "}
+                    AML Detector
+                  </a>
+                </Link>
+              </li>
+
+              {/* <li className="items-center">
                 <Link href="/auth/login">
                   <a
                     href="#pablo"
@@ -217,17 +301,17 @@ export default function Sidebar() {
                     Register
                   </a>
                 </Link>
-              </li>
+              </li> */}
             </ul>
 
             {/* Divider */}
-            <hr className="my-4 md:min-w-full" />
+            {/* <hr className="my-4 md:min-w-full" /> */}
             {/* Heading */}
-            <h6 className="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline">
+            {/* <h6 className="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline">
               No Layout Pages
-            </h6>
+            </h6> */}
             {/* Navigation */}
-
+            {/* 
             <ul className="md:flex-col md:min-w-full flex flex-col list-none md:mb-4">
               <li className="items-center">
                 <Link href="/landing">
@@ -252,16 +336,21 @@ export default function Sidebar() {
                   </a>
                 </Link>
               </li>
-            </ul>
+            </ul> */}
 
             {/* Divider */}
-            <hr className="my-4 md:min-w-full" />
+
+            {/* <hr className="my-4 md:min-w-full" /> */}
+
             {/* Heading */}
-            <h6 className="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline">
+
+            {/* <h6 className="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline">
               Documentation
-            </h6>
+            </h6> */}
+
             {/* Navigation */}
-            <ul className="md:flex-col md:min-w-full flex flex-col list-none md:mb-4">
+
+            {/* <ul className="md:flex-col md:min-w-full flex flex-col list-none md:mb-4">
               <li className="inline-flex">
                 <a
                   href="https://www.creative-tim.com/learning-lab/tailwind/nextjs/colors/notus"
@@ -349,7 +438,7 @@ export default function Sidebar() {
                   VueJS
                 </a>
               </li>
-            </ul>
+            </ul> */}
           </div>
         </div>
       </nav>
